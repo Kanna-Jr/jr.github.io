@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="styles/site.css" type="text/css" rel="stylesheet" />
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color:red;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 00%;
+}
+
+#Home {background-color: red;}
+#Offers {background-color: red;}
+#Contact {background-color:white}
+#About {background-color:white}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" >News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <figure>
+    <form action="buysummer.html">
+    <input type="image" src="images/familycare.jpg" alt="Submit">
+    <h1></h1>
+    <figure>
+    <form action="buysummer.html">
+    <input type="image" src="images/ayush.jpg" alt="Submit">
+    <h1></h1>
+    <figure>
+    <form action="buysummer.html">
+    <input type="image" src="images/fitness.jpg" alt="Submit">
+    <h1></h1>
+    <figure>
+    <form action="buysummer.html">
+    <input type="image" src="images/devices.jpg" alt="Submit">
+</div>
+
+<div id="Contact" class="tabcontent">
+  <div class="h1">
+    <h1> <marquee WIDTH=400 HEIGHT=50 BEHAVIOR=ALTERNATE>NEW ARRIVALS!! </marquee> </h1>
+    <figure>
+    <form action="buy.html">
+      <input type="image" src="images/shoes.jpg" alt="Submit">
+      <p> <b> NIKE Brands Shoes [MALE | FEMALE] </p> </b>
+      
+    </form>
+    <div class="h2">
+    <form action="buysummer.html">
+      <br> <h2> <b> Stand out this summer in florals, stripes and colors that pop with our favorite new looks. </h2> </br> </b>
+     <input type="image" src="images/summerlooks.jpg" alt="Submit" title="Click For More Details">
+      <input type="image" src="images/summerlooks2.jpg" alt="Submit" title="Click For More Details">
+       <input type="image" src="images/summerlooks3.jpg" alt="Submit"title="Click For More Details">
+       <h3> <b> Summer Looks For Men! </b> </h3>
+       <input type="image" src="images/msummerlooks.jpg" alt="Submit" title="Click For More Details">
+      <input type="image" src="images/msummerlooks2.jpg" alt="Submit" title="Click For More Details">
+       <input type="image" src="images/msummerlooks3.jpg" alt="Submit"title="Click For More Details">
+     </form>
+     </div>
+     </div>
+      <div>
+          <img id="topimg" src="images/slider/rbags2.jpg"/>						
+        </div>
+        </body>
+      <p> <b> Rebok Bags </p> </b>
+    </form>
+    </div>
+    
+  
+</div>
+  
+
+<div id="About" class="tabcontent">
+  
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 

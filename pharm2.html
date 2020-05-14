@@ -1,0 +1,82 @@
+<html>
+    <body>
+        <form onsubmit="return validateform()" name="form">
+            <label for="fname">First Name</label>
+            <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+          <label for="lname">Last Name</label>
+          
+          <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+          <label>Email</label>
+          <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+          <input type="text" id="email" name="email" placeholder="youremail@whatever.com..">
+          
+          <label for="subject">Subject</label>
+          <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit" >
+        </form>
+      </div>
+</div>
+</div>
+<script>
+function validateform(){
+    var check = 0
+        var x 
+        var y = document.getElementsByClassName("alert_id");
+        y[0].innerHTML = " ";
+        y[1].innerHTML = " ";
+        y[2].innerHTML = " ";
+        y[3].innerHTML = " ";
+
+        x = document.forms["form"]["firstname"].value;
+        if(x==""){
+            y[0].innerHTML = "Fill First Name *";
+            check ++
+        }
+        else{
+            if(!isNaN(x) || x.length < 6){
+                y[0].innerHTML = "Invalid First Name *";
+            check ++
+            }
+        }
+        x = document.forms["form"]["lastname"].value;
+        if(x==""){
+            y[1].innerHTML = "Fill Last Name *";
+            check ++
+        }
+        else{
+            if(!isNaN(x)){
+                y[1].innerHTML = "Invalid Last Name *";
+            check ++
+            }
+        }
+        x = document.forms["form"]["email"].value;
+        if(x==""){
+            y[2].innerHTML = "Fill Email Field *";
+            check ++
+        }
+        else{
+            if(!x.includes("@") || !x.includes(".com") || x.length<10){
+                y[2].innerHTML = "Invalid email *";
+            check ++
+            }
+        }
+        x = document.forms["form"]["subject"].value;
+        if(x==""){
+            y[3].innerHTML = "Please Enter a Query To Submit *";
+            check ++
+        }
+        if(check!=0){
+            return false
+
+        }
+
+}
+</script>
+    </body>
+</html>

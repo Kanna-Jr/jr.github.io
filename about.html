@@ -1,0 +1,452 @@
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="footer, address, phone, icons" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+        <style>
+.image4div{
+background-image: url("images/bg4.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+/*style the  flip card*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* icons style sheet*/
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+body {
+margin:0;
+padding:0;
+height:250%;
+}
+#container {
+   min-height:200%;
+   position:relative;
+}
+#header {
+   background:rgb(255, 255, 255);
+   padding:0px;
+}
+#body {
+   padding:5px;
+   padding-bottom:60px;   /* Height of the footer */
+}
+#footer {
+   position:bottom;
+   bottom:0;
+   width:100%;
+   height:40px;   /* Height of the footer */
+   background:white;
+}
+.footer-distributed{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+ 
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+.footer-distributed .footer-left{
+	width: 40%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+.footer-distributed h3 span{
+	color:  #5383d3;
+}
+ 
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+ 
+.footer-distributed .footer-center{
+	width: 35%;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+ 
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+ 
+.footer-distributed .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+ 
+.footer-distributed .footer-right{
+	width: 20%;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+ 
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+ 
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+ 
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+ 
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+ 
+ 
+@media (max-width: 880px) {
+ 
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	
+	}
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+	.main {
+		line-height: normal;
+		font-size: auto;
+	}
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+        </style>        
+    </head>
+    <body>
+        <div  class="image4div" >
+        <h1 style="color:black;"><b>Why Unimed</b><br></h1>
+        <h1></h1>
+        <h3 style="color: white;">Effortless procurement for all your medical requirements</h3>
+          <h1></h1>
+          <div style="height: 250px;width: 1475px;background-color:wheat;">
+            <div style="float:left; width: 650px;">
+            <div style="float:left;width:250px;height: 200PX;" >
+                <img src="icon1.png"><br><b>Verified products,trusted brands</b><br>
+                Unimed has a large repository of quality products from verified vendors.
+                Unimed follows a strict verification policy that ensures that you get the
+                finest products from the best suppliers, making your procurement easy,
+                effortless and cost effective.
+                </div>
+                <div style="float:right;width:250px;" >
+                    <img src="icon1.png"><br><b>Verified products,trusted brands</b><br>
+                    Unimed has a large repository of quality products from verified vendors.
+                    Unimed follows a strict verification policy that ensures that you get the
+                    finest products from the best suppliers, making your procurement easy,
+                    effortless and cost effective.
+                    </div>    
+            </div>
+            <div style="float: right;width: 700px;height: 250PX;">
+            <div style="float: left;width: 200px;">
+                <img src="icon3.png"><br><b>Easy pickup and delivery</b><br>
+                Unimed handles all your delivery aspects.This means 
+                that you don't have to stress on supply chain management
+                or logistics.Your product at your door step,anytime and every
+                time.
+            </div>
+            <div style="float: right;width:200px;">
+                <img src="icon4.png"><br><b>Secure Transactions</b><br>
+                Unimed backend is deployed with secure transaction
+                parameter,that ensure that your transactions are encrypted
+                secure and fast,with almost zero transaction failures.   
+            </div>
+            </div>    
+          </div>
+          <br>      
+           <h1 style="font-family: 'Times New Roman', Times, serif;color: white;">Trusted Brands</h1>
+           <center>
+           <img src="images/abbott.png" style="padding:50px;">
+           <img src="images/ponds.png" style="padding: 50px;">
+           <img src="images/john.png" style="padding: 50px;">
+           <img src="images/nestle.png" style="padding: 50px;">
+           <img src="images/h&b.png" style="padding: 50px;">
+           <img src="images/cetaphil.png" style="padding: 50px;">
+           <img src="images/dove1.png" style="padding: 50px;">
+           <img src="images/himalaya.jpg" style="padding: 50px;">
+           <img src="images/drorg.jpg" style="padding: 50px;">
+           <img src="images/apollo.png" style="padding: 50px;">
+           </center>
+          
+           <h1 style="font-family: 'Times New Roman', Times, serif;color:white">In-house Physicians</h1>
+           <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/dr2.jpeg" alt="Avatar" style="width:150px;height:150px;">
+              </div>
+              <div class="flip-card-back">
+                <h2>Kavya Suresh</h2> 
+                <p>Physician & Surgeon</p> 
+                <p>MBBS,MD</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="images/dr2.jpeg" alt="Avatar" style="width:150px;height:150px;">
+              </div>
+              <div class="flip-card-back">
+                <h2>Kavya Suresh</h2> 
+                <p>Physician & Surgeon</p> 
+                <p>MBBS,MD</p>
+              </div>
+            </div>
+          </div>
+          
+          
+          </div>
+          </div>
+          <div id="container">
+              <div id="footer">
+                <footer class="footer-distributed">
+                    <div class="footer-left">
+                    <h3>Unimed<span>.in</span></h3>
+                    <br>
+                    <h3>Stay home<span>&nbsp;Stay safe</span></h3>
+                    <p class="footer-links">
+                    <a href="covid.html">Home</a>
+                ·	<a href="#">Covid'19</a>
+                ·	<a href="#">About</a>
+                ·	<a href="#">Contact</a>
+                ·	<a href="#">Privacy</a>
+                ·	<a href="#">Terms</a>
+                    </p>
+                    <p class="footer-company-name">unimed &copy; 2019</p>
+                    </div>
+                    <div class="footer-center">
+                    <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Amrita Vishwa Vidyapeetham<br>
+                        Amritanagar Coimbatore - 641 112 <br>
+                        </span> TN, India</p>
+                    </div>
+             
+                    <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+91-422-2685000 </p>
+                    </div>
+             
+                    <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:univhq@amrita.edu">univhq@amrita.edu</a></p>
+                    </div>
+             
+                    </div>
+                    
+                    <div class="footer-right">
+             
+                    <p class="footer-company-about">
+                    <span>About the website</span>
+                    Effortless procurement for all your medical requirements
+                    </p>
+                    <br>
+                    
+             
+                        
+                        
+                        <a href="https://www.facebook.com/AmritaUniversity/" class="fa fa-facebook"></a>
+                        <a href="https://twitter.com/AMRITAedu?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
+                        <a href="#https://www.amrita.edu/" class="fa fa-google"></a>
+                        <a href="https://www.youtube.com/user/AmritaUniversity" class="fa fa-youtube"></a>
+                        <a href="https://www.instagram.com/amritacoimbatorecampus/" class="fa fa-instagram"></a>
+                        <a href="https://play.google.com/store/apps/details?id=in.co.rajkumaar.amritarepo&hl=en_IN" class="fa fa-android"></a>
+                 
+                        </div>
+            
+                    </footer>
+                  
+              </div>
+          </div>
+    </body>
+</html>

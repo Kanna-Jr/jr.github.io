@@ -1,0 +1,223 @@
+<html>
+    <body>
+        <form name="form" onsubmit="return onsubmit_click()" action="membership.html">
+                  
+            <div class="row">
+              <div class="col-50">
+                <h3>Payment Details</h3>
+                
+                <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                <input type="text" id="fname" name="firstname" placeholder="Your Name..." >
+                
+
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                <input type="text" id="email" name="email" placeholder="anything@whatever.com" >
+                
+                <label for="adr"><i class="fa fa-address-card-o"></i> Package</label>
+                <select id="" name="club" class="form_box">
+                  <option value="club1">Package 1, 6 Months</option>
+                  <option value="club2">Package 2, 12 Months</option>
+                  <option value="club3">Package 3, 24 Months</option>
+                </select>
+
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                <input type="text" id="city" name="city" placeholder="City.." >
+    
+                <div class="row">
+                  <div class="col-50">
+                    
+                    <label for="state">State</label>
+                    <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                    <input type="text" id="state" name="state" placeholder="Tamil Nadu" >
+                  </div>
+                  <div class="col-50">
+                    <label for="zip">Zip</label>
+                    
+                    <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                    <input type="text" id="zip" name="zip" placeholder="ZipCode" >
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-50">
+                <h3>Payment</h3>
+                <label for="fname">Accepted Cards</label>
+                <div class="icon-container">
+                  <i class="fa fa-cc-visa" style="color:navy;"></i>
+                  <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                </div>
+                <label for="cname">Name on Card</label>
+                <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                <input type="text" id="cname" name="cardname" placeholder="Name..." >
+                
+                <label for="ccnum">Credit card number</label>
+                <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                
+                <label for="expmonth">Exp Month</label>
+                <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                <input type="text" id="expmonth" name="expmonth" placeholder="Month" >
+                <div class="row">
+                  <div class="col-50">
+                    <label for="expyear">Exp Year</label>
+                    <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                    <input type="text" id="expyear" name="expyear" placeholder="20xx" >
+                  </div>
+                  <div class="col-50">
+                    <label for="cvv">CVV</label>
+                    <p style="float: right; font-size:11px;  color:red" class="alert_id"> </p>
+                    <input type="text" id="cvv" name="cvv" placeholder="xxx" >
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <input type="submit" value="Complete Purchase" class="btn">
+          </form>
+    </body>
+    <script>
+        function onsubmit_click(){
+          var check=0
+          var x = document.getElementsByClassName("alert_id");
+          var y
+          for(var i = 0; i<x.length; i++){
+            x[i].innerHTML = " ";
+          }
+      
+          y = document.forms["form"]["fname"].value;
+          if(y==""){
+            x[0].innerHTML = "Name Empty*";
+            check++
+          }
+          else{
+          if(!isNaN(y) || y.length<6){
+            x[0].innerHTML = "Invalid Name*";
+            check++
+          }
+          }
+          
+          
+          y = document.forms["form"]["email"].value;
+          if(y==""){
+            x[1].innerHTML = "Email Empty*";
+            check++
+            
+           }
+          else{
+            if(!y.includes("@") || !y.includes(".com")){
+                x[1].innerHTML = "Invalid email *";
+            check++
+              
+              }
+        }
+      
+          
+          y = document.forms["form"]["city"].value;
+          if(y==""){
+            x[2].innerHTML = "City Empty*";
+            check++
+            
+          }
+          else{
+          if(!isNaN(y)){
+            x[2].innerHTML = "Invalid City Name*";
+            check++
+          }
+          }
+      
+          y = document.forms["form"]["state"].value;
+          if(y==""){
+            x[3].innerHTML = "State Empty*";
+            check++
+          }
+          else{
+          if(!isNaN(y)){
+            x[3].innerHTML = "Invalid State Name*";
+            check++
+          }
+          }
+      
+          y = document.forms["form"]["zip"].value;
+          if(y==""){
+            x[4].innerHTML = "Zip code Empty*";
+            check++
+          }
+          else{
+          if(isNaN(y) || y.length!=6){
+            x[4].innerHTML = "Invalid zip Name*";
+            check++
+          }
+          }
+      
+          y = document.forms["form"]["cname"].value;
+          if(y==""){
+            x[5].innerHTML = "Care Name Empty*";
+            check++
+          }
+          else{
+          if(!isNaN(y) || y.length<6){
+            x[5].innerHTML = "Invalid card Name*";
+            check++
+          }
+          }
+      
+          y = document.forms["form"]["ccnum"].value;
+          if(y==""){
+            x[6].innerHTML = "Credit Card Number Empty*";
+            check++
+          }
+          else{
+          if(isNaN(y) || y.length!=16){
+            x[6].innerHTML = "Invalid Card Credential*";
+            check++
+          }
+          }
+      
+          y = document.forms["form"]["expmonth"].value;
+          if(y==""){
+            x[7].innerHTML = "Month Empty*";
+            check++
+          }
+          else{
+          if(isNaN(y) || y<0 || y>12){
+            x[7].innerHTML = "Invalid Month*";
+            check++
+          }
+          }
+      
+          y = document.forms["form"]["expyear"].value;
+          if(y==""){
+            x[8].innerHTML = "Year Empty*";
+            check++
+          }
+          else{
+          if(isNaN(y) || y.length!=4 || y<2020){
+            x[8].innerHTML = "Invalid Year*";
+            check++
+          }
+          }
+      
+          y = document.forms["form"]["cvv"].value;
+          if(y==""){
+            x[9].innerHTML = "CVV Empty*";
+            check++
+          }
+          else{
+          if(isNaN(y) || y.length!=3){
+            x[9].innerHTML = "Invalid CVV*";
+            check++
+          }
+          }
+          if(check!=0)
+          return false
+      
+          else{
+            alert("Payment Successful!")
+            return true
+          }
+        }
+      </script>
+</html>
